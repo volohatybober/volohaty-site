@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Кошик — VOLOHATY</title>
+  <link rel="stylesheet" href="/styles/cart.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div> <a href="/pages/index.html" class="logo">VOLOHATY</a> </div>
+      <a href="cart.html" class="cart-btn">Cart (<span id="cart-count">0</span>)</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>Your cart</h2>
+    <div id="cart-items"></div>
+    <p>Total amount: <span id="total-price">0</span>$</p>
+    <button id="clear-cart">Clear Cart</button>
+  </main>
+
+  <footer>
+    <p>© 2025 VOLOHATY. All rights reserved.</p>
+  </footer>
+
+  <script src="/scripts/cart.js"></script>
+</body>
+</html>

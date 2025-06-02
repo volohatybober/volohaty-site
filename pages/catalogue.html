@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catalogue — VOLOHATY</title>
+  <link rel="stylesheet" href="/styles/styles2.css" />
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+      <a href="/pages/index.html" class="logo">VOLOHATY</a>
+      <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <ul>
+        <li onclick="filterProducts('all')">View All</li>
+        <li onclick="filterProducts('man')">Men</li>
+        <li onclick="filterProducts('woman')">Women</li>
+      </ul>
+    </aside>
+
+    <main>
+      <div id="productList" class="product-grid"></div>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 VOLOHATY. All rights reserved.</p>
+  </footer>
+
+  <script src="/scripts/catalogue.js"></script>
+  <script src="/scripts/cart.js"></script>
+</body>
+</html>
