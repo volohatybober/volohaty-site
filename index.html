@@ -2,106 +2,107 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VOLOHATY Official Online Boutique</title>
-  <link rel="icon" type="image/png" href="../images/logo.ico" />
-  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="icon" type="image/png" href="./images/logo.ico" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
 
 <header class="header">
-  <div class="top-bar">
-    <nav class="nav-links">
-      <a href="index.html" class="collection-btn">Home</a>
+    <div class="top-bar">
+      <nav class="nav-links">
+        <a href="./index.html" class="collection-btn">Home</a>
 
-      <div class="menu-wrapper">
-        <a href="catalogue.html" class="menu-btn" id="menu-btn">Catalogue</a>
-        <div class="mega-menu" id="mega-menu">
-          <div class="mega-content">
-            <a href="catalogue.html" class="menu-btn" data-type="all" data-value="all">View All</a>
-            <a href="catalogue.html?gender=man" class="menu-btn" data-type="gender" data-value="man">Men</a>
-            <a href="catalogue.html?gender=woman" class="menu-btn" data-type="gender" data-value="woman">Women</a>
-            <a href="catalogue.html?category=shoes" class="menu-btn" data-type="category" data-value="shoes">Shoes</a>
-            <a href="catalogue.html?category=tshirt" class="menu-btn" data-type="category" data-value="tshirt">T-shirt</a>
-            <a href="catalogue.html?category=acc" class="menu-btn" data-type="category" data-value="acc">Accessories</a>
-            <a href="catalogue.html?category=shorts" class="menu-btn" data-type="category" data-value="shorts">Pants & Shorts</a>
-            <a href="catalogue.html?category=sweater" class="menu-btn" data-type="category" data-value="sweater">Sweatshirt</a>
+        <div class="menu-wrapper">
+          <a href="./pages/catalogue.html" class="menu-btn" id="menu-btn">Catalogue</a>
+          <div class="mega-menu" id="mega-menu">
+            <div class="mega-content">
+              <a href="./pages/catalogue.html" class="menu-btn" data-type="all" data-value="all">View All</a>
+              <a href="./pages/catalogue.html?gender=man" class="menu-btn" data-type="gender" data-value="man">Men</a>
+              <a href="./pages/catalogue.html?gender=woman" class="menu-btn" data-type="gender" data-value="woman">Women</a>
+              <a href="./pages/catalogue.html?category=shoes" class="menu-btn" data-type="category" data-value="shoes">Shoes</a>
+              <a href="./pages/catalogue.html?category=tshirt" class="menu-btn" data-type="category" data-value="tshirt">T-shirt</a>
+              <a href="./pages/catalogue.html?category=acc" class="menu-btn" data-type="category" data-value="acc">Accessories</a>
+              <a href="./pages/catalogue.html?category=shorts" class="menu-btn" data-type="category" data-value="shorts">Pants & Shorts</a>
+              <a href="./pages/catalogue.html?category=sweater" class="menu-btn" data-type="category" data-value="sweater">Sweatshirt</a>
+            </div>
           </div>
         </div>
-      </div>
+        
 
-      <a href="catalogue.html?gender=man" class="menu-btn" data-type="gender" data-value="man">Men</a>
-      <a href="catalogue.html?gender=woman" class="menu-btn" data-type="gender" data-value="woman">Women</a>
-      <a href="cart.html" class="menu-btn cart-link">Cart (<span id="cart-count">0</span>)</a>
-      <a href="order.html" class="menu-btn">My Orders</a>
+        <a href="./pages/catalogue.html?gender=man" class="menu-btn" data-type="gender" data-value="man">Men</a>
+        <a href="./pages/catalogue.html?gender=woman" class="menu-btn" data-type="gender" data-value="woman">Women</a>
+        <a href="./pages/cart.html" class="menu-btn cart-link">Cart (<span id="cart-count">0</span>)</a>
+        <a href="./pages/order.html" class="menu-btn">My Orders</a>
 
-      <a href="index.html" class="logo">VOLOHATY</a>
-    </nav>
-    <a href="index.html" class="menu-btn">Login</a>
-  </div>
-</header>
+        <a href="./index.html" class="logo">VOLOHATY </a>
+      </nav>
+      <a href="./index.html" class="menu-btn">Login</a>
+    </div>
+  </header>
 
-<main>
-  <section id="home" class="hero-section">
-    <section class="headline">
-      <h2>NEW COLLECTION 2025</h2>
+  <main>
+    <section id="home" class="hero-section">
+      <section class="headline">
+        <h2>NEW COLLECTION 2025</h2>
+      </section>
+      <button class="discover-btn" onclick="window.location.href='./pages/catalogue.html'">
+        <span class="text-wrapper">
+          <span class="text">DISCOVER NOW</span>
+        </span>
+      </button>
     </section>
-    <button class="discover-btn" onclick="window.location.href='catalogue.html'">
-      <span class="text-wrapper">
-        <span class="text">DISCOVER NOW</span>
-      </span>
-    </button>
-  </section>
 
-  <section class="boot-section">
-    <section class="headline1">
-      <h2>BUNNY BOOT</h2>
+    <section class="boot-section">
+      <section class="headline1">
+        <h2>BUNNY BOOT</h2>
+      </section>
+      <button class="discover-btn" onclick="window.location.href='./pages/catalogue.html?category=shoes'">
+        <span class="text-wrapper">
+          <span class="text">DISCOVER NOW</span>
+        </span>
+      </button>
     </section>
-    <button class="discover-btn" onclick="window.location.href='catalogue.html?category=shoes'">
-      <span class="text-wrapper">
-        <span class="text">DISCOVER NOW</span>
-      </span>
-    </button>
-  </section>
-</main>
 
-<footer class="footer">
-  <div class="footer-logo">VOLOHATY</div>
-  <div class="footer-container">
-    <div class="footer-column">
-      <h4>Contact Us</h4>
-      <p>Phone 1: +1 (555) 123-4567</p>
-      <p>Phone 2: +1 (555) 987-6543</p>
-      <p>Email: support@volohaty.com</p>
-    </div>
-    <div class="footer-column">
-      <h4>Our Stores</h4>
-      <p>123 Main St, New York, NY</p>
-      <p>456 Oak Ave, Los Angeles, CA</p>
-      <p>789 Pine Rd, Chicago, IL</p>
-    </div>
-    <div class="footer-column">
-      <h4>Follow Us</h4>
-      <div class="social-links">
-        <a href="#" aria-label="Instagram" class="social-icon insta">IG</a>
-        <a href="#" aria-label="Facebook" class="social-icon fb">FB</a>
-        <a href="#" aria-label="Telegram" class="social-icon tg">TG</a>
-        <a href="#" aria-label="Twitter" class="social-icon tw">TW</a>
+    <footer class="footer">
+      <div class="footer-logo">VOLOHATY</div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <p>Phone 1: +1 (555) 123-4567</p>
+          <p>Phone 2: +1 (555) 987-6543</p>
+          <p>Email: support@volohaty.com</p>
+        </div>
+        <div class="footer-column">
+          <h4>Our Stores</h4>
+          <p>123 Main St, New York, NY</p>
+          <p>456 Oak Ave, Los Angeles, CA</p>
+          <p>789 Pine Rd, Chicago, IL</p>
+        </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram" class="social-icon insta">IG</a>
+            <a href="#" aria-label="Facebook" class="social-icon fb">FB</a>
+            <a href="#" aria-label="Telegram" class="social-icon tg">TG</a>
+            <a href="#" aria-label="Twitter" class="social-icon tw">TW</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Working Hours</h4>
+          <p>Mon - Fri: 9:00 AM - 8:00 PM</p>
+          <p>Sat: 10:00 AM - 6:00 PM</p>
+          <p>Sun: Closed</p>
+        </div>
       </div>
-    </div>
-    <div class="footer-column">
-      <h4>Working Hours</h4>
-      <p>Mon - Fri: 9:00 AM - 8:00 PM</p>
-      <p>Sat: 10:00 AM - 6:00 PM</p>
-      <p>Sun: Closed</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 VOLOHATY. All rights reserved.</p>
-  </div>
-</footer>
+      <div class="footer-bottom">
+        <p>© 2025 VOLOHATY. All rights reserved.</p>
+      </div>
+    </footer>
+    
 
-<script src="../scripts/scripts.js"></script>
-<script src="../scripts/cart.js"></script>
+  <script src="./scripts/scripts.js"></script>
+  <script src="./scripts/cart.js"></script>
 </body>
 </html>
