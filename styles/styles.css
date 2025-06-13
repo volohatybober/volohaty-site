@@ -8,8 +8,11 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   padding-top: 1vh;
+  
 }
-
+body::-webkit-scrollbar {
+  display: none;
+}
 header {
   border-bottom: 1px solid #000000;
   position: relative;
@@ -21,7 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px 10px;
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -30,10 +33,12 @@ header {
   z-index: 1000;
   border-bottom: 1px solid #000;
 }
-
+.headline1{
+  color: black;
+}
 .logo {
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 25px !important;;
+  font-weight: bold; 
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
@@ -79,32 +84,96 @@ header {
   border-top: 1px solid #ccc;
   display: none;
   z-index: 10;
-  padding: 20px 40px;
+  padding: 10px 50px;
+  list-style: none;
+}
+/* Контент mega-menu */
+.mega-content {
+  display: flex;
+  gap: 60px;
 }
 
-.menu-btn,
-.cart-btn,
-.collection-btn {
+/* Колонки в mega-menu */
+.mega-column h3 {
+  margin-bottom: 10px;
   font-size: 16px;
-  background: none;
+}
+
+.mega-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mega-column li {
+  margin-bottom: 10px;
+}
+.mega-column a {
+  text-decoration: none;
+  color: #000;
+  transition: 
+    border 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.3s ease;
+  padding: 5px 0;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.mega-column a:hover {
+  color: black;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Анімація лінії */
+.mega-column a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+.mega-column a:hover::after {
+  width: 100%;
+}
+.menu-btn, .cart-btn {
+  background-color: transparent;
   border: 1px solid transparent;
-  padding: 6px 12px;
+  padding: 10px 15px;
   cursor: pointer;
-  border-radius: 1vh;
-  transition: border 0.3s ease;
+  font-size: 16px;
+  transition: 
+    border 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
-.cart-btn:hover {
-  border: 1px solid black;
+.menu-btn:hover, .cart-btn:hover {
+  border-color: black;
+  background-color: #f9f9f9;
+  color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+/* Анімація лінії під кнопкою */
+.menu-btn::after, .cart-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  transition: width 0.3s ease;
+}
 
-}
-.menu-btn:hover {
-  border: 1px solid black;
-
-}
-.collection-btn:hover {
-  border: 1px solid black;
-
-}
 .mega-menu.active {
   display: block;
 }
@@ -156,13 +225,111 @@ header {
   height: auto;
 }
 
-footer {
-  padding: 20px;
+.footer-logo {
   text-align: center;
-  background: #f5f5f5;
-  margin-top: 0vh;
-  
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-family: 'Arial Black', Arial, sans-serif;
+  color: #000;
+  user-select: none;
+  text-transform: uppercase;
 }
+
+
+.footer {
+  background-color: #fff;
+  color: #000;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: left;
+  border-top: 1px solid #000;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer-column p {
+  margin: 6px 0;
+  line-height: 1.5;
+  color: #000;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #000;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-column {
+    min-width: 100%;
+  }
+}
+
+
 
 .hero-section {
   background-image: url('/images/show.png');
@@ -192,11 +359,92 @@ footer {
   justify-content: flex-end;
   align-items: center;
   color: white;
-  padding: 60px 20px;
+  padding: 45px 20px;
   text-align: center;
 }
 
+.menu-wrapper {
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  transform: translateY(0%);
+  transition: transform 0.4s ease;
+  list-style: none;
+}
 
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 1.5vh;
+  padding: 12px 16px;
+  min-width: 180px;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.mega-menu.active {
+  display: block;
+}
+
+.mega-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+
+.mega-content li {
+  width: 100%;
+}
+
+.mega-content li a {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000000;
+  border: 1px solid transparent;
+  border-radius: 1vh;
+  background-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.mega-content li a:hover {
+  background-color: #f0f0f0;
+  border-color: #000;
+  color: #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.mega-content li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+.mega-content li a:hover::after {
+  width: 100%;
+}
+
+/* Hover на wrapper — показує меню */
+.menu-wrapper:hover .mega-menu {
+  display: block;
+}
 .discover-btn {
   background: white;
   font-size: 9px;      
@@ -222,6 +470,14 @@ footer {
   font-size: 15px;
 }
 
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0%);
+  transition: transform 0.4s ease;
+  font-size: 15px;
+  list-style: none;
+}
 .h3 {
   font-size: 18px;
   margin-bottom: 10px;
@@ -245,4 +501,54 @@ footer {
   100% {
     transform: translateY(0);
   }
+}
+.menu-wrapper:hover .mega-menu {
+  display: block;
+}
+.mini-catalogue {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.mini-catalogue h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.mini-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.mini-product {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.mini-product:hover {
+  transform: scale(1.05);
+}
+
+.mini-product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.mini-product h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+}
+
+.mini-product p {
+  color: #555;
 }
